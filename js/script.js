@@ -82,8 +82,21 @@ var bro = {
         'Balbroa'
     ],
 
-    name: function(){
+    rand_name: function(){
         return (bro.first_names[Math.floor(Math.random() * bro.first_names.length)] + ' ' + bro.middle_names[Math.floor(Math.random() * bro.middle_names.length)] + ' ' + bro.last_names[Math.floor(Math.random() * bro.last_names.length)]);
+    },
+    name: function(a, b, c, d, e) {
+        a = a.length;
+        b = b.length;
+        c = c.length;
+        d = d.length;
+        e = e.length;
+
+        var first_index = bro.first_names.length % (bro.first_names.length % a + bro.first_names.length % b);
+        var middle_index = bro.middle_names.length % c;
+        var last_index = bro.last_names.length  % (bro.last_names.length % d + bro.last_names.length % e);
+
+        return bro.first_names[first_index] + ' ' + bro.middle_names[middle_index] + ' ' + bro.last_names[last_index];
     }
 };
 
@@ -93,7 +106,7 @@ $(document).ready(function () {
         if ($('span[contenteditable]').hasClass('empty')) {
 
         } else {
-            $('.output').text(bro.name);
+            $('.output').text(bro.name($('#a').text(), $('#b').text(), $('#c').text(), $('#d').text(), $('#e').text()));
         }
     });
 
