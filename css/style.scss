@@ -73,8 +73,9 @@ html, body, .container {
     .bottom {
 //      background-color: darken(#054958, 15%);
       width: 100%;
+      text-align: center;
 
-      #name {
+      #name, #rand {
         width: 100%;
         height: 50px;
         background-color: lighten(#E64C2F, 5%);
@@ -98,12 +99,35 @@ html, body, .container {
         }
       }
 
+      .icon-twitter {
+        display: none;
+        
+        &.result {
+          display: inline-block;
+          float: left;
+        }
+        
+        &:hover {
+          color: lighten(#E64C2F, 5%);
+          cursor: pointer;
+        }
+      }
+
+      #rand {
+        width: 50%;
+        height: 30px;
+        font-size: 18px;
+      }
+
       .output {
         width: 100%;
         font-size: 36px;
         color: #E64C2F;
         text-align: center;
+        margin: 0;
       }
     }
   }
 }
+
+@import "fontello-embedded.css";

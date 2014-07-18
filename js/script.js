@@ -30,7 +30,23 @@ var bro = {
         'Han',
         'Jack',
         'Rocky',
-        'The'
+        'The',
+        'Swellington',
+        'Franco',
+        'Duke',
+        'Benjamin',
+        'Bo',
+        'Larkin',
+        'Irving',
+        'Apollbro',
+        'Broseph',
+        'Chadwick',
+        'Trent',
+        'Paul',
+        'Brody',
+        'Chaz',
+        'Keith',
+        'Cliff'
     ],
 
     middle_names: [
@@ -44,7 +60,23 @@ var bro = {
         'Theodore',
         'La',
         'Great',
-        'Moose-Jaw'
+        'Moose-Jaw',
+        'Lee',
+        'Rayner',
+        'Job',
+        'Wyatt',
+        'Michael',
+        'Claude',
+        'Flynn',
+        'Ryder',
+        'Poe',
+        'Rae',
+        'Henry',
+        'Eli',
+        'Troy',
+        'Maddox',
+        'Xavier',
+        'Colton'
     ],
 
     last_names: [
@@ -79,12 +111,18 @@ var bro = {
         'Brosevelt',
         'Tengo',
         'Lincoln',
-        'Balbroa'
+        'Balbroa',
+        'Swellington',
+        'Brosidon',
+        'Creed',
+        'Bro',
+        'Stanwick'
     ],
 
     rand_name: function(){
         return (bro.first_names[Math.floor(Math.random() * bro.first_names.length)] + ' ' + bro.middle_names[Math.floor(Math.random() * bro.middle_names.length)] + ' ' + bro.last_names[Math.floor(Math.random() * bro.last_names.length)]);
     },
+
     name: function(a, b, c, d, e) {
         a = a.length;
         b = b.length;
@@ -108,6 +146,11 @@ $(document).ready(function () {
         } else {
             $('.output').text(bro.name($('#a').text(), $('#b').text(), $('#c').text(), $('#d').text(), $('#e').text()));
         }
+    });
+
+    $('#rand').on('click', function() {
+        $('.output').text(bro.rand_name());
+        $('.icon-twitter').addClass('result');
     });
 
     $('span[contenteditable]').on('keyup', function() {

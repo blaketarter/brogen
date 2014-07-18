@@ -1,3 +1,4 @@
+@import url(fontello-embedded.css);
 *, *:before, *:after {
   box-sizing: border-box; }
   *::selection, *:before::selection, *:after::selection {
@@ -53,8 +54,9 @@ html, body, .container {
       color: #F2EEDC;
       border-color: #f2eedc; }
     .container .wrapper .bottom {
-      width: 100%; }
-      .container .wrapper .bottom #name {
+      width: 100%;
+      text-align: center; }
+      .container .wrapper .bottom #name, .container .wrapper .bottom #rand {
         width: 100%;
         height: 50px;
         background-color: #e96046;
@@ -62,16 +64,29 @@ html, body, .container {
         font-size: 24px;
         border: none;
         border-radius: 2px; }
-        .container .wrapper .bottom #name:hover {
+        .container .wrapper .bottom #name:hover, .container .wrapper .bottom #rand:hover {
           cursor: pointer;
           background-color: #E64C2F; }
-        .container .wrapper .bottom #name:active {
+        .container .wrapper .bottom #name:active, .container .wrapper .bottom #rand:active {
           outline: none;
           background-color: #e13a1b; }
-        .container .wrapper .bottom #name:focus {
+        .container .wrapper .bottom #name:focus, .container .wrapper .bottom #rand:focus {
           outline: none; }
+      .container .wrapper .bottom .icon-twitter {
+        display: none; }
+        .container .wrapper .bottom .icon-twitter.result {
+          display: inline-block;
+          float: left; }
+        .container .wrapper .bottom .icon-twitter:hover {
+          color: #e96046;
+          cursor: pointer; }
+      .container .wrapper .bottom #rand {
+        width: 50%;
+        height: 30px;
+        font-size: 18px; }
       .container .wrapper .bottom .output {
         width: 100%;
         font-size: 36px;
         color: #E64C2F;
-        text-align: center; }
+        text-align: center;
+        margin: 0; }
