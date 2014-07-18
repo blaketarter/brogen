@@ -92,9 +92,9 @@ var bro = {
         d = d.length;
         e = e.length;
 
-        var first_index = bro.first_names.length % (bro.first_names.length % a + bro.first_names.length % b);
-        var middle_index = bro.middle_names.length % c;
-        var last_index = bro.last_names.length  % (bro.last_names.length % d + bro.last_names.length % e);
+        var first_index = (bro.first_names.length % a + bro.first_names.length % b) % bro.first_names.length;
+        var middle_index = c % bro.middle_names.length;
+        var last_index = (bro.last_names.length % d + bro.last_names.length % e) % bro.last_names.length;
 
         return bro.first_names[first_index] + ' ' + bro.middle_names[middle_index] + ' ' + bro.last_names[last_index];
     }
@@ -104,17 +104,30 @@ $(document).ready(function () {
     $('#name').on('click', function() {
 
         if ($('span[contenteditable]').hasClass('empty')) {
-
+            //TODO show message here.
         } else {
             $('.output').text(bro.name($('#a').text(), $('#b').text(), $('#c').text(), $('#d').text(), $('#e').text()));
         }
     });
 
     $('span[contenteditable]').on('keyup', function() {
+
         if ('' === $(this).text()) {
             $(this).addClass('empty');
         } else {
             $(this).removeClass('empty');
         }
+
+
+    }).on('keydown', function(e) {
+        var code = e.which || e.keyCode;
+
+        if (13 === code) {
+            $('#name').trigger('click');
+
+            e.preventDefault();
+        }
+
     }).trigger('keyup');
+
 });
