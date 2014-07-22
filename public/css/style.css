@@ -23,7 +23,7 @@ html, body, .container {
   height: 100%;
   width: 100%;
   font-family: Helvetica, Arial, 'sans-serif';
-  overflow: hidden; }
+  background-color: #054958; }
 
 .container {
   position: absolute;
