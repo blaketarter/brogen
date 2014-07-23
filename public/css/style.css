@@ -71,11 +71,20 @@ html, body, .container {
           background-color: #e13a1b; }
         .container .wrapper .bottom #name:focus, .container .wrapper .bottom #rand:focus {
           outline: none; }
+      .container .wrapper .bottom .output-wrapper {
+        background-color: rgba(0, 0, 0, 0.2); }
+      .container .wrapper .bottom #tweet {
+        text-decoration: none;
+        color: #eb735d;
+        display: none;
+        font-size: 18px; }
+        .container .wrapper .bottom #tweet.result {
+          display: block; }
+        .container .wrapper .bottom #tweet:hover {
+          color: #e96046;
+          cursor: pointer; }
       .container .wrapper .bottom .icon-twitter {
-        display: none; }
-        .container .wrapper .bottom .icon-twitter.result {
-          display: inline-block;
-          float: left; }
+        color: #eb735d; }
         .container .wrapper .bottom .icon-twitter:hover {
           color: #e96046;
           cursor: pointer; }
