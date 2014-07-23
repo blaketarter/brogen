@@ -3,10 +3,67 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>BC | BroCentral</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="BroCentral is the home for bros and lady bros alike. Do you like beer? We thought so. Are you the life of the party? Then you're in the right place. Do you like being awesome? Then BroCentral is the place for you.">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BroCentral: The Home for everything Bro">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.brocentral.com">
+    <meta property="og:image" content="http://www.brocentral.com/img/thumbnail.jpg">
+    <meta property="og:description" content="BroCentral is the home for bros and lady bros alike. Do you like beer? We thought so. Are you the life of the party? Then you're in the right place. Do you like being awesome? Then BroCentral is the place for you.">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="/css/style.css"/>
+
+    <!-- Latest comiled and minified jQuery -->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        BroCentral
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/">Bro Name Generator</a>
+                        </li>
+                        <li>
+                            <a href="http://totalbromove.com">totalbromove.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
         <div class="wrapper">
             <h1>What's Your Bro Name?</h1>
             <h4>From BroCentral</h4>
@@ -14,7 +71,6 @@
             And I like watching <span id="c" contenteditable></span> in my spare time.
             Sometimes I like to <span id="d" contenteditable></span>.
             Something weird about me is <span id="e" contenteditable></span>.
-            <br/>
             <div class="bottom">
                 <button id="name">Find Out Your Bro Name</button>
                 <div class="output-wrapper">
@@ -26,7 +82,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -32,7 +32,8 @@ html, body, .container {
   background-color: #054958;
   color: #F2EEDC; }
   .container .wrapper {
-    width: 650px;
+    max-width: 650px;
+    min-width: 300px;
     margin: 50px auto;
     font-size: 36px;
     line-height: 2;
@@ -43,11 +44,11 @@ html, body, .container {
       font-size: 40px;
       text-align: center;
       margin-bottom: 0;
-      margin-top: 0; }
+      margin-top: 0;
+      line-height: 1; }
     .container .wrapper h4 {
       font-size: 16px;
       text-align: center;
-      margin: -20px 0 0 0;
       opacity: 0.8; }
     .container .wrapper hr {
       color: #F2EEDC;
