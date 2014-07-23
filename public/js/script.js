@@ -138,19 +138,24 @@ var bro = {
     }
 };
 
+var replaceBroName = function(name) {
+    $('#tweet').attr('href', $('#tweet').data('href').replace(/{broname}/, name));
+    $('.output').text(name);
+    $('#tweet').addClass('result');
+};
+
 $(document).ready(function () {
     $('#name').on('click', function() {
 
         if ($('span[contenteditable]').hasClass('empty')) {
             //TODO show message here.
         } else {
-            $('.output').text(bro.name($('#a').text(), $('#b').text(), $('#c').text(), $('#d').text(), $('#e').text()));
+            replaceBroName(bro.name($('#a').text(), $('#b').text(), $('#c').text(), $('#d').text(), $('#e').text()));
         }
     });
 
     $('#rand').on('click', function() {
-        $('.output').text(bro.rand_name());
-        $('.icon-twitter').addClass('result');
+        replaceBroName(bro.rand_name());
     });
 
     $('span[contenteditable]').on('keyup', function() {
@@ -172,5 +177,4 @@ $(document).ready(function () {
         }
 
     }).trigger('keyup');
-
 });

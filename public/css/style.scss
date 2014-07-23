@@ -100,13 +100,28 @@ html, body, .container {
         }
       }
 
-      .icon-twitter {
+      .output-wrapper {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      #tweet {
+        text-decoration: none;
+        color: lighten(#E64C2F, 10%);
         display: none;
-        
+        font-size: 18px;
+
         &.result {
-          display: inline-block;
-          float: left;
+          display: block;
         }
+
+        &:hover {
+          color: lighten(#E64C2F, 5%);
+          cursor: pointer;
+        }
+      }
+
+      .icon-twitter {
+        color: lighten(#E64C2F, 10%);
         
         &:hover {
           color: lighten(#E64C2F, 5%);
